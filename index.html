@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Canale Verifica — Guida rapida</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#6ee7b7;--muted:#9aa4b2;--glass:rgba(255,255,255,0.03)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071026 0%, #071a2a 100%);-webkit-font-smoothing:antialiased}
+    .container{max-width:960px;margin:36px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:68px;height:68px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#032;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 18px;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:20px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 24px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.02)}
+    .muted{color:var(--muted);font-size:14px}
+    .section-title{display:flex;align-items:center;gap:10px;font-weight:600;margin-bottom:10px}
+    ul.steps{padding-left:18px;margin:8px 0}
+    .example{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:12px;border-radius:8px;font-family:monospace;font-size:13px;color:#d9f1e6}
+    .cta{display:inline-block;margin-top:12px;padding:10px 14px;border-radius:10px;background:var(--accent);color:#062022;text-decoration:none;font-weight:700}
+    footer{margin-top:20px;color:var(--muted);font-size:13px;text-align:center}
+    .hint{background:var(--glass);padding:10px;border-radius:8px;color:var(--muted);font-size:13px}
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.logo{width:56px;height:56px}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">V</div>
+      <div>
+        <h1>Canale Verifica — guida ufficiale</h1>
+        <p class="lead">Spiegazione rapida e chiara del canale di verifica del server: scopo, regole, messaggi tipo e consigli per gli staff.</p>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <section class="card">
+        <div class="section-title">Scopo del canale</div>
+        <p class="muted">Il canale di verifica è pensato per assicurare che nuovi membri siano reali, leggano il regolamento e accettino le regole del server prima di ottenere pieno accesso.</p>
+
+        <div style="margin-top:14px">
+          <div class="section-title">Quando usarlo</div>
+          <ul class="muted">
+            <li>All'ingresso di nuovi membri (welcome flow).</li>
+            <li>Per controlli anti-bot o anti-spam.</li>
+            <li>Per assegnare ruoli iniziali (es. "Membro verificato").</li>
+          </ul>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="section-title">Regole consigliate</div>
+          <ol class="muted">
+            <li>Leggi il regolamento del server.</li>
+            <li>Completa la verifica cliccando il pulsante o rispondendo al questionario.</li>
+            <li>Non usare account multipli o bot.</li>
+            <li>Comportati rispettando la community.</li>
+          </ol>
+        </div>
+
+        <div style="margin-top:14px">
+          <div class="section-title">Flussi di verifica comuni</div>
+          <ul class="muted">
+            <li>Reazione a messaggio -> ruolo assegnato automaticamente.</li>
+            <li>Interazione con bot (es. captcha, CAPTCHA a immagini).</li>
+            <li>Invio di un breve form (nome, età, motivo di iscrizione).</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <aside class="card" aria-label="Riepilogo rapido">
+        <div class="section-title">Quick tips</div>
+        <div class="hint">Metti il canale visibile ai nuovi utenti ma senza permessi di scrittura. Usa bot per automatizzare e loggare le verifiche.</div>
+
+        <div style="margin-top:12px">
+          <div class="section-title">Messaggio di benvenuto (esempio)</div>
+          <div class="example">Ciao! 👋 Per ottenere accesso al server, clicca **Verifica** qui sotto e segui le istruzioni. Leggi le regole in <#regolamento>.</div>
+
+          <a class="cta" href="#example">Mostra messaggio tipo</a>
+        </div>
+
+        <div style="margin-top:12px">
+          <div class="section-title">Ruoli raccomandati</div>
+          <ul class="muted">
+            <li>✅ Membro verificato</li>
+            <li>🔒 Ospite (accessi limitati)</li>
+            <li>👀 Moderatore (staff)</li>
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+
+    <section class="card" style="margin-top:18px" id="example">
+      <div class="section-title">Esempio completo di messaggio per il canale</div>
+      <p class="muted">Copia e incolla questo messaggio nel canale di verifica. Sostituisci i riferimenti con i tuoi canali/role.</p>
+
+      <pre class="example" style="white-space:pre-wrap">Benvenuto nel server! 🎉
+
+Per accedere a tutte le aree è necessario verificare il tuo account.
+
+1. Clicca sul pulsante **Verifica** qui sotto.
+2. Segui le istruzioni del bot (captcha o domanda semplice).
+3. Dopo la verifica otterrai il ruolo **Membro verificato**.
+
+Se hai problemi, apri un ticket o contatta lo staff.
+</pre>
+
+      <div style="display:flex;gap:10px;margin-top:12px;flex-wrap:wrap">
+        <button class="cta" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--accent);font-weight:600">Copia testo</button>
+        <button class="cta" style="background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted);font-weight:600">Esempio bot</button>
+      </div>
+
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <div class="section-title">Linee guida per lo staff</div>
+      <ul class="muted">
+        <li>Controllare i log delle verifiche almeno una volta al giorno.</li>
+        <li>Impostare messaggi automatici per i casi di errore.</li>
+        <li>Limitare i permessi di invio messaggi ai nuovi utenti fino alla verifica.</li>
+        <li>Usare blacklist per domini/email sospette (se applicabile).</li>
+      </ul>
+
+      <div style="margin-top:12px" class="muted">Suggerimento: integra un sistema di appeal in caso di ban/verification fail.</div>
+    </section>
+
+    <footer>
+      <div class="muted">Vuoi personalizzare il layout o aggiungere istruzioni specifiche per il tuo bot? Rispondi e ti preparo la versione su misura.</div>
+    </footer>
+  </div>
+</body>
+</html>
